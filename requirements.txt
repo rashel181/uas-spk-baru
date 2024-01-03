@@ -3,3 +3,7 @@ numpy
 pandas
 pydeck
 streamlit
+scipy
+distance
+spatial
+math

@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import math
 from scipy.spatial import distance as d
-import scipy
 
 if 'clicked' not in st.session_state:
     st.session_state.clicked = False
@@ -182,10 +181,10 @@ def run():
     
     st.write("## INPUT NILAI KRITERIA UNTUK TIAP ALTERNATIF (LAKUKAN HINGGA 4 KALI PENGISIAN UNTUK TIAP ALTERNATIF)")
     
-    c1 = st.number_input("Nilai C1", min_value=1, max_value=4, value=1, step=1)
-    c2 = st.number_input("Nilai C2", min_value=1, max_value=4, value=1, step=1)
-    c3 = st.slider("Nilai C3 (JUTA)", min_value=10, max_value=1000, value=10, step=10)
-    c4 = st.number_input("Nilai C4", min_value=1, max_value=4, value=1, step=1)
+    c1 = st.number_input("Nilai C1, Ketersediaan Sumber Daya Manusia (SDM)", min_value=1, max_value=4, value=1, step=1)
+    c2 = st.number_input("Nilai C2, Teknologi Produksi Terbaru", min_value=1, max_value=4, value=1, step=1)
+    c3 = st.slider("Nilai C3 (JUTA), Biaya Investasi Awal", min_value=10, max_value=1000, value=10, step=10)
+    c4 = st.number_input("Nilai C4, Dampak Lingkungan", min_value=1, max_value=4, value=1, step=1)
     
     if st.button("Simpan", type='primary', on_click=click_button):
         simpanData(c1,c2,c3,c4)
