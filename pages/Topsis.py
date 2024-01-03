@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import math
 from scipy.spatial import distance as d
+import scipy
 
 if 'clicked' not in st.session_state:
     st.session_state.clicked = False
