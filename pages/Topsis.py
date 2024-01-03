@@ -136,8 +136,8 @@ def simpanData(c1, c2, c3, c4):
         st.session_state.nilai_kriteria = np.array([[c1, c2, c3, c4]])
     else:
         dataLama = st.session_state.nilai_kriteria
-        if dataLama.size == 0:  # Check if the array is empty
-            dataLama = np.empty((0, 4))  # Initialize with an empty array
+        if dataLama.size == 0:  # check array kosong
+            dataLama = np.empty((0, 4))  # buat array kosong
         dataBaru = np.vstack([dataLama, [c1, c2, c3, c4]])
         st.session_state.nilai_kriteria = dataBaru
 
